@@ -61,6 +61,25 @@ function createRegistrationForm() {
     ])
     .setRequired(true);
 
+  form.addTextItem()
+    .setTitle('Gender')
+    .setHelpText('Used for roommate matching.')
+    .setRequired(false);
+
+  form.addTextItem()
+    .setTitle('Roommate request (if any)')
+    .setHelpText('If you know another participant you would like to room with, please give their name here. They should list your name in their application as well.')
+    .setRequired(false);
+
+  form.addMultipleChoiceItem()
+    .setTitle('Roommate gender preference')
+    .setHelpText('If you did not name a specific roommate above, please indicate your preference.')
+    .setChoiceValues([
+      'I prefer to room with someone of the same gender as me',
+      'No preference'
+    ])
+    .setRequired(false);
+
   form.addParagraphTextItem()
     .setTitle('Additional Comments')
     .setHelpText('Anything else you would like us to know? (Optional)')
